@@ -9,9 +9,10 @@ body {
 .homepage-card__wrapper {
   background-color: var(--secondary-VeryLightGray);
   position: absolute;
-  width: 445px;
+  width: 45%;
+  height: 62%;
   padding: 56px 55px 0px 0px;
-  bottom: 90px;
+  bottom: 0;
 }
 
 .homepage-card__wrapper button {
@@ -37,10 +38,31 @@ body {
   opacity: 0.7;
 }
 
+.homepage-card__wrapper button {
+  position: absolute;
+  bottom: 0;
+}
+
 @media only screen and (max-width: 1030px) {
   .homepage-card__wrapper {
-    width: 60%;
-    height: 40%;
+    width: 75%;
+    height: 58%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .homepage-card__wrapper {
+    margin-top: 24px;
+    position: static;
+    width: 100%;
+    padding: 0;
+    background: none;
+  }
+  .homepage-card__wrapper button {
+    position: relative;
   }
 }
 
@@ -48,14 +70,6 @@ body {
   * {
     flex-wrap: wrap;
     text-align: center;
-  }
-
-  .homepage-card__wrapper {
-    margin-top: 24px;
-    position: static;
-    width: 100%;
-    padding: 0;
-    background: none;
   }
 
   .contactMe {
