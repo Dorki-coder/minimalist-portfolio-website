@@ -1,0 +1,247 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary-Cyan: #5fb4a2;
+  --primary-DarkBlue: #203a4c;
+  --primary-GrayDarkBlue: #33323d;
+
+  --secondary-VeryLightGray: #fafafa;
+  --secondary-LightGray: #eaeaeb;
+  --secondary-BrightRed: #f43030;
+}
+
+body {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--primary-GrayDarkBlue);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "Ibarra Real Nova";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--primary-GrayDarkBlue);
+}
+
+h2 {
+  font-family: "Ibarra Real Nova";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 42px;
+  color: var(--primary-GrayDarkBlue);
+}
+
+h3 {
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 36px;
+  color: var(--primary-GrayDarkBlue);
+}
+
+.container {
+  margin: auto;
+  width: 1100px;
+}
+
+header {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 42px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: var(--primary-GrayDarkBlue);
+}
+
+.active {
+  color: var(--primary-Cyan);
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: var(--primary-Cyan);
+  transition: 0.3s;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-button {
+  position: relative;
+  border: none;
+  width: 200px;
+  height: 48px;
+  background: var(--primary-DarkBlue);
+  padding-left: 48px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.primary-button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.primary-button:hover {
+  background: var(--primary-Cyan);
+}
+
+.secondary-button {
+  background: none;
+  border: 1px solid var(--primary-GrayDarkBlue);
+  width: 168px;
+  height: 48px;
+}
+
+.secondary-button:hover {
+  background: var(--primary-GrayDarkBlue);
+  color: var(--secondary-VeryLightGray);
+}
+
+footer {
+  padding: 24px 0 24px 0;
+  background-color: var(--primary-GrayDarkBlue);
+}
+
+footer a {
+  color: var(--secondary-VeryLightGray);
+}
+
+footer nav {
+  margin-left: 48px;
+}
+
+.footer-nav__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-link__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contactMe {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  align-items: center;
+}
+
+.contactMe-line {
+  width: 534px;
+  height: 1px;
+  background: var(--primary-GrayDarkBlue);
+  opacity: 0.15;
+}
+
+@media only screen and (max-width: 1030px) {
+  .container {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+.header-burger {
+  display: none;
+}
+
+.burger-nav {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 32px;
+  background-color: var(--primary-GrayDarkBlue);
+  padding: 40px 80px;
+  right: 10%;
+  top: 15%;
+  z-index: 1;
+}
+
+.burger-nav a {
+  font-size: 12px;
+  color: var(--secondary-LightGray);
+}
+
+.burger-button {
+  width: 24px;
+  height: 24px;
+  background: url("../images/icons/hamburger.svg") no-repeat center center;
+}
+
+.burger-button.active {
+  background: url("../images/icons/close.svg") no-repeat center center;
+}
+
+.active {
+  display: flex;
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    margin-bottom: 40px;
+  }
+  header nav {
+    display: none;
+  }
+  .header-burger {
+    display: block;
+  }
+  .footer-wrapper,
+  .footer-nav__wrapper,
+  .footer-nav__wrapper nav {
+    margin: 0;
+    align-items: center;
+    gap: 32px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contactMe {
+    text-align: center;
+    gap: 20px;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+.section-wrapper {
+  display: flex;
+  margin-top: 94px;
+  justify-content: space-between;
+  border-top: 1px solid rgba(32, 58, 76, 0.15);
+  padding: 48px 0 48px 0;
+}
+
+.section-wrapper:nth-child(3) {
+  margin-top: 0;
+}
+
+.section-wrapper h2 {
+  width: 350px;
+}
+
+.section-description p {
+  width: 635px;
+  margin-bottom: 24px;
+}
+
+.input-wrapper {
+  width: 635px;
+}
+
+.input-title {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 30px;
+}
+
+input {
+  background-color: rgba(51, 60, 61, 0.1);
+  border: none;
+  width: 100%;
+  height: 48px;
+  padding: 9px 16px;
+}
+
+input:focus {
+  outline: 1px solid var(--primary-Cyan);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.primary-button {
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.massage {
+  height: 96px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 1030px) {
+  .section-wrapper {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section,
+  .section-wrapper p {
+    width: 100%;
+  }
+}

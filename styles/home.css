@@ -1,0 +1,65 @@
+body {
+  background-color: var(--primary-color);
+}
+
+.homepage-img_wrapper {
+  position: relative;
+}
+
+.homepage-card__wrapper {
+  background-color: var(--secondary-VeryLightGray);
+  position: absolute;
+  width: 445px;
+  padding: 56px 55px 0px 0px;
+  bottom: 90px;
+}
+
+.homepage-card__wrapper button {
+  margin-top: 53px;
+}
+
+.aboutMe {
+  display: flex;
+  margin-top: 150px;
+  gap: 125px;
+}
+
+.aboutMe-wrapper {
+  border-top: 1px solid rgba(32, 58, 76, 0.15);
+  border-bottom: 1px solid rgba(32, 58, 76, 0.15);
+  padding: 50px 0 50px 0;
+  width: 360px;
+}
+
+.aboutMe-wrapper p {
+  margin-top: 28px;
+  margin-bottom: 24px;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 1030px) {
+  .homepage-card__wrapper {
+    width: 60%;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  * {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .homepage-card__wrapper {
+    margin-top: 24px;
+    position: static;
+    width: 100%;
+    padding: 0;
+    background: none;
+  }
+
+  .contactMe {
+    gap: 20px;
+    justify-content: center;
+  }
+}
